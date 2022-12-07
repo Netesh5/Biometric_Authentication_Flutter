@@ -9,7 +9,7 @@ class Auth with ChangeNotifier {
   Future<void> Bioauthentication() async {
     try {
       isAuthenticated = await authentication.authenticate(
-          localizedReason: "Authenticate to Proceed forward",
+          localizedReason: "Authenticate to Proceed Forward",
           options: const AuthenticationOptions(
               stickyAuth: true, useErrorDialogs: false));
       authorized = isAuthenticated;
