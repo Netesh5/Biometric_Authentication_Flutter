@@ -12,6 +12,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:biometric_auth/main.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   // testWidgets('Counter increments smoke test', (WidgetTester tester) async {
   //   // Build our app and trigger a frame.
   //   await tester.pumpWidget(MyApp());
@@ -28,8 +29,8 @@ void main() {
   //   expect(find.text('0'), findsNothing);
   //   expect(find.text('1'), findsOneWidget);
   // });
-  test("Bioauthencation return true if authecation is successfull", () {
-    final value = Auth().Bioauthentication();
+  test("It return true if authecation is successfull", () async {
+    final value = await Auth().Bioauthentication();
     expect(value, true);
   });
 }
